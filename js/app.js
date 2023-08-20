@@ -1,26 +1,26 @@
-const big_title = document.getElementById(".big-title");
-const header = document.querySelector("header");
-const shadow = document.querySelector(".shadow");
-const img_container = document.querySelector(".imgContainer");
-const section = document.querySelector("section");
-const content = document.querySelector(".content");
-const opacity = document.querySelectorAll(".opacity");
-const border = document.querySelector(".border");
+const big_title = document.getElementById('.big-title');
+const header = document.querySelector('header');
+const shadow = document.querySelector('.shadow');
+const img_container = document.querySelector('.imgContainer');
+const section = document.querySelector('section');
+const content = document.querySelector('.content');
+const opacity = document.querySelectorAll('.opacity');
+const border = document.querySelector('.border');
 
 let header_height = header.offsetHeight;
 let section_height = section.offsetHeight;
 
-let judul = document.getElementById("judul");
-let layer1 = document.getElementById("layer1");
-let layer2 = document.getElementById("layer2");
+let judul = document.getElementById('judul');
+let layer1 = document.getElementById('layer1');
+let layer2 = document.getElementById('layer2');
 
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
 	let value = window.scrollY;
 	let sectionY = section.getBoundingClientRect();
 
-	judul.style.marginTop = value * 0.5 + "px";
+	judul.style.marginTop = value * 0.5 + 'px';
 	// layer1.style.marginTop = value * 50 + "px";
-	layer2.style.marginTop = value * 0.8 + "px";
+	layer2.style.marginTop = value * 0.8 + 'px';
 
 	opacity.forEach((Element) => {
 		Element.style.opacity = value / (sectionY.top + section_height);
@@ -42,27 +42,27 @@ window.addEventListener("scroll", () => {
 	border.style.width = `${(value / (sectionY.top + section_height)) * 30}%`;
 });
 
-const nav_btn = document.querySelectorAll(".nav-btn");
-const slides = document.querySelectorAll(".video-slide");
-const contents = document.querySelectorAll(".konten");
+const nav_btn = document.querySelectorAll('.nav-btn');
+const slides = document.querySelectorAll('.video-slide');
+const contents = document.querySelectorAll('.konten');
 
 var sliderNav = function (manual) {
 	nav_btn.forEach((btn) => {
-		btn.classList.remove("active");
+		btn.classList.remove('active');
 	});
 	slides.forEach((slide) => {
-		slide.classList.remove("active");
+		slide.classList.remove('active');
 	});
 	contents.forEach((content) => {
-		content.classList.remove("active");
+		content.classList.remove('active');
 	});
 
-	nav_btn[manual].classList.add("active");
-	slides[manual].classList.add("active");
-	contents[manual].classList.add("active");
+	nav_btn[manual].classList.add('active');
+	slides[manual].classList.add('active');
+	contents[manual].classList.add('active');
 };
 nav_btn.forEach((btn, i) => {
-	btn.addEventListener("click", () => {
+	btn.addEventListener('click', () => {
 		sliderNav(i);
 	});
 });
