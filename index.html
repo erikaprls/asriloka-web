@@ -5,6 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<link rel="stylesheet" href="css/style.css" />
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900" rel="stylesheet">
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+   		<link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<!-- <link rel="stylesheet" href="css/img.css"> -->
 		<title>Asriloka</title>
 	</head>
 	<body>
@@ -52,30 +59,50 @@
 			</div>
 		</section>
 
-		<section class="why-asriloka">
-			<div class="container">
-				<div
-					class="slide"
-					style="background-image: url('img/berpengalaman.jpg')">
-					<h3>Berpengalaman</h3>
-				</div>
+		<section class="ftco-section">
+			<div class="container-crsl">
+				<div class="row-crsl">
+					<div class="col-md-12">
+						<div class="slider-hero justify-content-center align-items-center">
+							<div class="featured-carousel owl-carousel">
+								<div class="item">
+									<div class="work">
+										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(Img/slider-1.jpg);">
+											<div class="text text-center">
+												<h2>Discover New Places</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="work">
+										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(Img/slider-2.jpg);">
+											<div class="text text-center">
+												<h2>Dream Destination</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="work">
+										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(Img/slider-3.jpg);">
+											<div class="text text-center">
+												<h2>Travel Exploration</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 
-				<div
-					class="slide active"
-					style="background-image: url('img/profesional.jpg')">
-					<h3>Profesional</h3>
-				</div>
-
-				<div
-					class="slide"
-					style="background-image: url('img/smart&fun.jpg')">
-					<h3>Smart & Fun</h3>
-				</div>
-
-				<div
-					class="slide"
-					style="background-image: url('img/provider.jpg')">
-					<h3>Provider Terbaik</h3>
+							<div class="my-5 text-center">
+			          <ul class="thumbnail">
+			            <li class="active img"><a href="#"><img src="Img/thumb-1.jpg" alt="Image" class="img-fluid"></a></li>
+			            <li><a href="#"><img src="Img/thumb-2.jpg" alt="Image" class="img-fluid"></a></li>
+			            <li><a href="#"><img src="Img/thumb-3.jpg" alt="Image" class="img-fluid"></a></li>
+			          </ul>
+			        </div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -158,27 +185,10 @@
 		</section>
 
 		<script src="js/app.js"></script>
-		<script>
-			activeslideimg();
-
-			function activeslideimg(activeSlide = 2) {
-				const slides = document.querySelectorAll('.slide');
-
-				slide[activeSlide].classList.add('active');
-
-				for (const slide of slides) {
-					slide.addEventListener('click', () => {
-						clearActiveClasses();
-						slide.classList.add('active');
-					});
-				}
-
-				function clearActiveClasses() {
-					slides.forEach((slide) => {
-						slide.classList.remove('active');
-					});
-				}
-			}
-		</script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
